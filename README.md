@@ -1,2 +1,3 @@
-# week1
-Exercises for TelegraphAcademy Prep Week 1
+# Telegraph academy Week 1 prepwork.
+
+This repo contains exercises and solutions for Telegraph Academy Prep Week 1
