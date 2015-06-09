@@ -29,8 +29,7 @@
   //box[key] = sec
   
   //How do you access an object that is inside another object?
-  // ---
-  
+  // --- You can access objects within objects in the same way that you refer to the first object. Ex. obj[obj2[obj3[key]]]
   
   //How do we loop through objects to access the values?
 	// --- for (var key in box){
@@ -38,4 +37,9 @@
   				}
   
   //How do you create an object that is nested inside another object?
-	// ---
+	// --- This is the same as this slide 
+  //box = {
+  //"material" : "cardboard",
+  //"size" : {
+  //  "height": 2,
+  //  "width": 80}
