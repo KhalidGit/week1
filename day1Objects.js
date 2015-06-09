@@ -3,7 +3,7 @@
 //To get these fundamentals as deeply embedded as possible, type them out new each time. Avoid copying code, as you're just ignoring a chance to get in more useful practice. 
 
 // 1. To start, let's create a variable, mysticalAnimal, and set it equal to an object literal. 
-
+var mysticAnimal = {};
 
 // Dot Notation:
 // Recall that dot notation takes whatever is to the right of the dot, turns it into a string, and looks up that string as a property name in the object to the left of the dot. 
@@ -13,7 +13,11 @@
 // 4. Add a likes property, and set it equal to an empty array.
 // 5. Add a property called bestFriend, and set it equal to your name. 
 // 6. Add in a superPower property. Set it equal to 'gives amazing hugs'.
-
+mysticAnimal.type = "dragon";
+mysticAnimal.name = "Leslie";
+mysticAnimal.likes = [];
+mysticAnimal.bestFriend = "tatiana";
+mysticAnimal.superPower = "gives amazing hugs";
 // Access using dot notation
 // 7. Now try to access all the values you've stored in mysticalAnimal. One at a time (not all at once!), what do you need to do to access the values:
   // 'dragon'
@@ -22,7 +26,11 @@
   // your own name
   // 'gives amazing hugs'
 // Hopefully this starts to feel somewhat repetitive- that's awesome! That means that you're learing this super well so far. If it doesn't, try going back and doing it again on your own time. 
-
+mysticAnimal.type;
+mysticAnimal.name;
+mysticAnimal.likes;
+mysticAnimal.bestFriend;
+mysticAnimal.superPower;
 
 // Bracket notation:
 // Recall that we can do two different things with bracket notation:
@@ -30,12 +38,25 @@
   // B. Pass in a string (as noted by the quotes surrounding it) and look up that string as a property name in the object. 
 // Remember that bracket notation is the ONLY way to look up variables or expressions when using them with objects. 
 
-// 8. Create a variable called newPropertyToAdd, and set it equal to 'food'. 
+// 8. Create a variable called newPropertyToAdd, and set it equal to 'food'.
+var newPropertyToAdd = "food";
 // 9. Now, using bracket notation and newPropertyToAdd, create a food property on our mysticalAnimal object, and set it equal to 'BBQ'. NOTE: you should not be typing the word food to accomplish this task!
+mysticAnimal[newPropertyToAdd] = "BBQ";
 // 10. Now set newPropertyToAdd equal to 'canFly'.
-// 11. What do you expect to happen when we type in the following line?
-  // mysticalAnimal[newPropertyToAdd] = true; 
+var newPropertyToAdd = "can fly";
+// 11. What do you expect to happen when we type in the following line?//get more help on this
+mysticAnimal[newPropertyToAdd] = true; 
   // Think through this with your pair. Then uncomment that line and console.log mysticalAnimal afterwards!
+// console.log mysticalAnimal output
+// Object {type: "dragon", 
+// name: "Leslie", 
+// likes: Array[0], 
+// bestFriend: "tatiana", 
+// superPower: "gives amazing hugs"â€¦},
+// bestFriend: "tatiana",
+// can fly: true,
+// food: "BBQ",
+// likes: Array[0]
   // Now let's talk through what just happened:
     // The JS interpreter reads the line of code from left to right, just as we do. 
     // The first thing it does is encounter the variable mysticalAnimal. It looks up what this variable points to, and finds that it evaluates to an object. 
@@ -47,8 +68,8 @@
 // Now, onto point B above of using bracket notation- passing in a string. 
 
 // 12. Using bracket notation still, pass in the string 'collects' inside the brackets, and set it equal to the value 'diamonds and gold and fire extinguishers'. 
-// At first glance, this appears to be a different pattern than passing in a variable inside the brackets. But let's revisit the same steps we talked through above, and you'll notice that all we did was make one step simpler for the computer. 
-// Now let's talk through what just happened:
+mysticAnimal['collects'] = 'diamonds and gold and fire extinguishers';
+// At first glance, this appears to be a different pattern than passing in a variable inside the brackets. But let's revisit the same steps we talked through above, and you'll notice that all we did was make one step simpler for the computer.
   // The JS interpreter reads the line of code from left to right, just as we do. 
   // The first thing it does is encounter the variable mysticalAnimal. It looks up what this variable points to, and finds that it evaluates to an object. 
   // That object is now what the computer holds, as a result of evaluating the variable mysticalAnimal. 
@@ -60,12 +81,17 @@
 // HINT: When looking up a string, use dot notation. When looking up a variable, use bracket notation! This is all you need to know 98% of the time. 
 
 // 13. Create a variable called thisIsAVariable. Set it equal to the string 'superPower'.
+var thisIsAVariable = 'superPower';
 // Let's use this to play with bracket vs. dot notation. 
 // 14. What do you expect to happen when we try the following line? Talk this through with your partner for a minute. 
-  // console.log(mysticalAnimal.thisIsAVariable);
+console.log(mysticAnimal.thisIsAVariable); undefined since we just named a variable. didn't add it to the object
   // The dot notation means that JS is going to try to look for a property name that is exactly the string after the dot- in this case, it's looking for a property called thisIsAVariable in our mysticalAnimal object. And clearly we don't have a property named that, so it will return undefined!
 // 15. Now try using thisIsAVariable using the proper form of access for variables. What do you get this time?
+var thisIsAVariable = "superPower";
+console.log(mysticAnimal[thisIsAVariable]);//prints out gives amazing hugs since you assigned the property superpower to thisIsAVariable
 // 16. And what happens when you put that variable in quotes inside the brackets? 
+mysticAnimal."thisIsAVariable" 
+mysticAnimal["thisIsAVariable"] Both are incorrect ways to access a variable
   // It does the exact same thing as if you had used dot notation- looks it up as a string, not a variable. 
 
 // Object Literals:
@@ -87,5 +113,16 @@
   // food
   // canFly
   // collects
+  
+var mysticAnimal2 = {
+	type: "dragon"
+  name: "smaug"
+  likes: "gold and fire"
+  bestFriend: "bilbo"
+  superPower: "breathing fire"
+  food: "dwarves"
+  canFly: true
+  collects: "gold"
+};
 
 // Awesome, by now you should have a pretty good familiarity with objects, bracket and dot notation, object literals, and accessing properties of objects. Feel free to keep exploring more on your own; objects are important things to understand!
